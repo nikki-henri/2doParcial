@@ -53,6 +53,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Segunda opcion"/>
+
+        <RadioButton
+            android:id="@+id/opt3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tercera opcion"/>
     </RadioGroup>
 
     <SeekBar
@@ -62,7 +68,7 @@
         android:max="10"/>
 
     <RatingBar
-        android:id="@+id/raiting_bar"
+        android:id="@+id/rating_bar"
         android:stepSize="0.5"
         android:rating="1.5"
         android:numStars="5"
