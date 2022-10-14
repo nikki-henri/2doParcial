@@ -3,19 +3,24 @@ package com.example.ejercicio_segundo_parcial;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.Fragment;
 
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
+import com.example.ejercicio_segundo_parcial.fragments.FavFragment;
+import com.example.ejercicio_segundo_parcial.fragments.HomeFragment;
 import com.google.android.material.navigation.NavigationView;
+import com.google.android.material.tabs.TabLayout;
 
 public class DrawerActivity extends AppCompatActivity {
 
     NavigationView navigationView;
     DrawerLayout drawerLayout;
     boolean isOpen = false;
+    TabLayout tabLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +33,24 @@ public class DrawerActivity extends AppCompatActivity {
 
         navigationView = findViewById(R.id.nav_view);
         drawerLayout = findViewById(R.id.drawer_layout);
+        tabLayout = findViewById(R.id.tab_layout);
+
+        showFragment(new HomeFragment());
+
+        tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+                message("TabSelected: " + tab.getText());
+            }
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+                message("TabUnselected: " + tab.getText());
+            }
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+                message("TabReselected: " + tab.getText());
+            }
+        });
 
         drawerLayout.addDrawerListener(new DrawerLayout.DrawerListener() {
             @Override
@@ -59,18 +82,26 @@ public class DrawerActivity extends AppCompatActivity {
                 switch (item.getItemId()){
                     case R.id.menu_favorite:
                         message("Favorite");
+                        showFragment(new FavFragment());
                         break;
                     case R.id.menu_delete:
                         message("Delete");
                         break;
                     case R.id.menu_account:
                         message("Profile");
+                        showFragment(new HomeFragment());
                         break;
                 }
                 return false;
             }
         });
+    }
 
+    public void showFragment(Fragment fragment){
+        getSupportFragmentManager().beginTransaction()
+                .setReorderingAllowed(true)
+                .replace(R.id.fragment_container_view, fragment)
+                .commit();
     }
 
     @Override

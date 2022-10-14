@@ -5,4 +5,10 @@
     <string name="btn_advanced_widgets">ADVANCED WIDGETS</string>
     <string name="btn_drawer_layout">DRAWER LAYOUT</string>
     <string name="name_txt">Nicole Henrichsen</string>
+
+    <string name="fav_txt">Fav</string>
+    <string name="account_txt">Account</string>
+    <string name="delete">Delete</string>
+
+    <string name="home_txt">HOME</string>
 </resources>
