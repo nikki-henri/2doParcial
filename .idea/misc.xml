@@ -10,11 +10,13 @@
         <entry key="app/src/main/res/drawable/ic_baseline_menu_24.xml" value="0.1485" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_advanced_widgets.xml" value="0.28229166666666666" />
-        <entry key="app/src/main/res/layout/activity_drawer.xml" value="0.28229166666666666" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/activity_widgets.xml" value="0.28229166666666666" />
+        <entry key="app/src/main/res/layout/activity_drawer.xml" value="0.15664825439453126" />
+        <entry key="app/src/main/res/layout/activity_home.xml" value="0.2682291666666667" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.33201446533203127" />
+        <entry key="app/src/main/res/layout/activity_widgets.xml" value="0.45262908935546875" />
         <entry key="app/src/main/res/layout/fragment_fav.xml" value="0.28125" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.28125" />
+        <entry key="app/src/main/res/layout/fragment_home_header.xml" value="0.28125" />
         <entry key="app/src/main/res/layout/header_drawer_view.xml" value="0.28229166666666666" />
         <entry key="app/src/main/res/menu/menu.xml" value="0.1" />
       </map>

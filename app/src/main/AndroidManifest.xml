@@ -14,12 +14,16 @@
         android:theme="@style/Theme.Ejercicio_segundo_parcial"
         tools:targetApi="31">
         <activity
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            android:name=".HomeActivity"
+            android:exported="false" />
+        <activity
             android:name=".DrawerActivity"
             android:exported="false" />
         <activity
             android:name=".AdvancedWidgetsActivity"
             android:exported="false"
-            android:label="Advanced Widgets"></activity>
+            android:label="Advanced Widgets" />
         <activity
             android:name=".WidgetsActivity"
             android:exported="false" />
